@@ -30,10 +30,10 @@ class MappingsPane extends Component {
     return (
       
       <Grid container spacing={1}>
-          <Grid item xs={4}>
+          {/* <Grid item xs={12}>
             Dataset:
-          </Grid>
-          <Grid item xs={8}>
+          </Grid> */}
+          <Grid item xs={12}>
             <select className="full-width"
               onChange={this.handleSelectDataset}
               value={selectedDataset}
@@ -46,7 +46,7 @@ class MappingsPane extends Component {
             </select>
           </Grid>
 
-          <Grid item xs={4}>
+          {/* <Grid item xs={4}>
             Projection:
           </Grid>
           <Grid item xs={8}>
@@ -60,7 +60,7 @@ class MappingsPane extends Component {
               </option>
               ))}
             </select>
-          </Grid>
+          </Grid> */}
           <Grid item xs={12}>
           <p className="info">{datasetInfo}</p>
           </Grid>
