@@ -1,0 +1,122 @@
+{
+    "title": "BLM Antique",
+    "datasetInfo": "All digitized objects older than 1000 AD from Badisches Landesmuseum (2.707 objects)",
+    "embeddings": [
+        {
+            "name": "visual similarity (Resnet50 & UMAP)",
+            "file": "UMAP.json"
+        }
+    ],
+    "clusters": {
+        "clusterList": [
+            "collection_cluster",
+            "century"
+        ],
+        "clusterColors": [
+            "#05fb34",
+            "#ff00ff",
+            "#ff8000",
+            "#126afa",
+            "#00ffff",
+            "#8fae88",
+            "#bb033d",
+            "#dbfe0b",
+            "#427d03",
+            "#ff80ff",
+            "#2400a5",
+            "#008080",
+            "#9344c6",
+            "#f94b78",
+            "#80ffff",
+            "#51364e",
+            "#8ea2fc",
+            "#f9cd78",
+            "#6fdc06",
+            "#a56d3a",
+            "#2ffb90",
+            "#8000ff",
+            "#1db9ce",
+            "#0000ff",
+            "#3eaf4a",
+            "#97fd69",
+            "#ff0080",
+            "#c5b323",
+            "#f63006",
+            "#96019f",
+            "#731102",
+            "#d9bedd",
+            "#05b302",
+            "#ce7ca5",
+            "#2d4ca9",
+            "#e344d7",
+            "#024614",
+            "#5786ae",
+            "#061154",
+            "#5034fd",
+            "#a7e5b6",
+            "#ff8758",
+            "#a44576",
+            "#a93b03",
+            "#667c5d",
+            "#57dec9",
+            "#b76ff4",
+            "#058630",
+            "#ebfcae",
+            "#7ca01c",
+            "#37c18c",
+            "#6570ee"
+        ]
+    },
+    "total": 2707,
+    "sliders": [
+        {
+            "id": "yearStart",
+            "title": "Year (start)",
+            "info": "",
+            "typeNumber": "float",
+            "color": "#838193",
+            "min": -8000.0,
+            "max": 1000.0
+        },
+        {
+            "id": "yearEnd",
+            "title": "Year (end)",
+            "info": "",
+            "typeNumber": "float",
+            "color": "#81f794",
+            "min": -6500.0,
+            "max": 1453.0
+        }
+    ],
+    "info": [
+        "title",
+        "materials",
+        "locations",
+        "year",
+        "collection"
+    ],
+    "search": [
+        {
+            "columnField": "materials",
+            "type": "selection"
+        },
+        {
+            "columnField": "techniques",
+            "type": "selection"
+        },
+        {
+            "columnField": "locations",
+            "type": "selection"
+        },
+        {
+            "columnField": "collection",
+            "type": "selection"
+        }
+    ],
+    "url_prefix": "https://data.landesmuseum.de/id/",
+    "sprite_side": 32,
+    "sprite_dir": "blm_antique",
+    "sprite_number": 3,
+    "sprite_image_size": 64,
+    "sprite_actual_size": 2048
+}

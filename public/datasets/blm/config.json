@@ -1,0 +1,145 @@
+{
+    "title": "BLM",
+    "datasetInfo": "All digitized collections of Badisches Landesmuseum (27.438 objects)",
+    "embeddings": [
+        {
+            "name": "visual similarity (Resnet50 & UMAP)",
+            "file": "UMAP.json"
+        }
+    ],
+    "clusters": {
+        "clusterList": [
+            "collection_cluster",
+            "century"
+        ],
+        "clusterColors": [
+            "#00ff00",
+            "#ff00ff",
+            "#0080ff",
+            "#ff8000",
+            "#80bf80",
+            "#7c2f91",
+            "#bf0201",
+            "#0000ff",
+            "#00ffff",
+            "#ffff00",
+            "#e081fc",
+            "#2f830b",
+            "#00ff80",
+            "#000080",
+            "#008080",
+            "#ec1c75",
+            "#85d402",
+            "#70bdfe",
+            "#fec972",
+            "#8000ff",
+            "#c57171",
+            "#7a5efa",
+            "#662825",
+            "#1642c3",
+            "#98770a",
+            "#15c640",
+            "#0bc3c2",
+            "#b5eeb5",
+            "#acfb51",
+            "#004235",
+            "#64745c",
+            "#c535e8",
+            "#56feb9",
+            "#c4411e",
+            "#ccae2f",
+            "#5a82ba",
+            "#3f01bc",
+            "#cda7ac",
+            "#4fff2c",
+            "#80ffff",
+            "#c9c4f5",
+            "#352d68",
+            "#b001bb",
+            "#b26bbf",
+            "#6cac39",
+            "#fd4ba6",
+            "#fffaaa",
+            "#a9164f",
+            "#3cd881",
+            "#fe563d",
+            "#fa1023",
+            "#f8945e",
+            "#fafd59",
+            "#3c5b91",
+            "#37c900",
+            "#3e29fc",
+            "#3d9f72",
+            "#5c5d1c",
+            "#55c4bb",
+            "#b8fa05",
+            "#fdc005",
+            "#260138",
+            "#882fd6",
+            "#939bd4",
+            "#26ceff",
+            "#bf4084",
+            "#4885fc",
+            "#0d84bf",
+            "#55017e",
+            "#0d9342",
+            "#8e868a"
+        ]
+    },
+    "total": 27438,
+    "sliders": [
+        {
+            "id": "yearStart",
+            "title": "Year (start)",
+            "info": "",
+            "typeNumber": "int",
+            "color": "#8f8081",
+            "min": 1000,
+            "max": 2022
+        },
+        {
+            "id": "yearEnd",
+            "title": "Year (end)",
+            "info": "",
+            "typeNumber": "int",
+            "color": "#87ff88",
+            "min": 1000,
+            "max": 2099
+        }
+    ],
+    "info": [
+        "title",
+        "persons",
+        "year",
+        "collection"
+    ],
+    "search": [
+        {
+            "columnField": "materials",
+            "type": "selection"
+        },
+        {
+            "columnField": "techniques",
+            "type": "selection"
+        },
+        {
+            "columnField": "locations",
+            "type": "selection"
+        },
+        {
+            "columnField": "persons",
+            "type": "selection"
+        }
+        ,
+        {
+            "columnField": "collection",
+            "type": "selection"
+        }
+    ],
+    "url_prefix": "https://data.landesmuseum.de/id/",
+    "sprite_side": 32,
+    "sprite_dir": "blm",
+    "sprite_number": 27,
+    "sprite_image_size": 64,
+    "sprite_actual_size": 2048
+}

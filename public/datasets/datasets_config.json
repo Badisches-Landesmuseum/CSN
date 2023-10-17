@@ -1,0 +1,25 @@
+{
+    "default": 3,
+    "data": [
+        {
+            "name": "BLM Collections (large)",
+            "directory": "blm"
+        },
+        {
+            "name": "BLM Photographic (medium)",
+            "directory": "blm_photographic"
+        },    
+        {
+            "name": "BLM None-Photographic (small)",
+            "directory": "blm_none-photographic"
+        },   
+        {
+            "name": "BLM Antique (small)",
+            "directory": "blm_antique"
+        },
+        {
+            "name": "AP Collections (large)",
+            "directory": "ap"
+        }
+    ]
+}

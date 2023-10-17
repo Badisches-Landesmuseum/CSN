@@ -1,0 +1,95 @@
+{
+    "title": "BLM Photographic",
+    "datasetInfo": "All digitized photographs from Badisches Landesmuseum (18.261 objects)",
+    "embeddings": [
+        {
+            "name": "visual similarity (Resnet50 & UMAP)",
+            "file": "UMAP.json"
+        }
+    ],
+    "clusters": {
+        "clusterList": [
+            "collection_cluster"
+        ],
+        "clusterColors": [
+            "#00ff00",
+            "#ff00ff",
+            "#0080ff",
+            "#ff8000",
+            "#80bf80",
+            "#6303a0",
+            "#fe0443",
+            "#318105",
+            "#ed82e7",
+            "#00ffff",
+            "#ffff00",
+            "#055786",
+            "#00ff80",
+            "#0000ff",
+            "#9d524b",
+            "#fbbe70",
+            "#8cde07",
+            "#95d6fb",
+            "#893cfb",
+            "#800000",
+            "#f3488e",
+            "#6683c5",
+            "#0caa6a"
+        ]
+    },
+    "total": 18261,
+    "sliders": [
+        {
+            "id": "yearStart",
+            "title": "Year (start)",
+            "info": "",
+            "typeNumber": "int",
+            "color": "#8b8388",
+            "min": 1800,
+            "max": 2021
+        },
+        {
+            "id": "yearEnd",
+            "title": "Year (end)",
+            "info": "",
+            "typeNumber": "int",
+            "color": "#92ff88",
+            "min": 1865,
+            "max": 2021
+        }
+    ],
+    "info": [
+        "title",
+        "persons",
+        "year",
+        "collection"
+    ],
+    "search": [
+        {
+            "columnField": "materials",
+            "type": "selection"
+        },
+        {
+            "columnField": "techniques",
+            "type": "selection"
+        },
+        {
+            "columnField": "locations",
+            "type": "selection"
+        },
+        {
+            "columnField": "persons",
+            "type": "selection"
+        },
+        {
+            "columnField": "collection",
+            "type": "selection"
+        }
+    ],
+    "url_prefix": "https://data.landesmuseum.de/id/",
+    "sprite_side": 32,
+    "sprite_dir": "blm_photographic",
+    "sprite_number": 18,
+    "sprite_image_size": 64,
+    "sprite_actual_size": 2048
+}
