@@ -166,9 +166,9 @@ class Layout extends Component {
   }
 
   clickOnImage(){
-    console.log("open image",this.state.hover_index);
     try{
-      let url = this.props.metadata[this.state.hover_index].link_URL
+      let url = this.props.settings["url_prefix"] + this.props.metadata[this.state.hover_index].id;
+      // console.log(url);
       window.open(url, '_blank', 'noopener,noreferrer');
     }catch(err){}
   }
