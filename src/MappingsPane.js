@@ -30,40 +30,45 @@ class MappingsPane extends Component {
     return (
       
       <Grid container spacing={1}>
-          {/* <Grid item xs={12}>
-            Dataset:
-          </Grid> */}
-          <Grid item xs={12}>
-            <select className="full-width"
-              onChange={this.handleSelectDataset}
-              value={selectedDataset}
-            >
-              {dataset_options.map((option, index) => (
+        {/* <Grid item xs={12}>
+      Dataset:
+    </Grid> */}
+        <Grid item xs={12}>
+          <select className="full-width"
+            onChange={this.handleSelectDataset}
+            value={selectedDataset}
+          >
+            {dataset_options.map((option, index) => (
               <option key={option} value={option}>
-                  {option}
+                {option}
               </option>
-              ))}
-            </select>
-          </Grid>
+            ))}
+          </select>
+        </Grid>
 
-          {/* <Grid item xs={4}>
-            Projection:
-          </Grid>
-          <Grid item xs={8}>
-            <select className="full-width"
-              onChange={this.handleSelectAlgorithm}
-              value={algorithm_options[algorithm_choice]}
-            >
-              {algorithm_options.map((option, index) => (
-              <option key={option} value={option}>
-                  {option}
-              </option>
-              ))}
-            </select>
-          </Grid> */}
-          <Grid item xs={12}>
+        {/* <Grid item xs={4}>
+      Projection:
+    </Grid>
+    <Grid item xs={8}>
+      <select className="full-width"
+        onChange={this.handleSelectAlgorithm}
+        value={algorithm_options[algorithm_choice]}
+      >
+        {algorithm_options.map((option, index) => (
+        <option key={option} value={option}>
+            {option}
+        </option>
+        ))}
+      </select>
+    </Grid> */}
+        <Grid item xs={12}>
           <p className="info">{datasetInfo}</p>
-          </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <p className="info">
+            Visual Similarity using <button onClick={() => window.open('https://arxiv.org/abs/1512.03385', '_blank')}>ResNet50</button> and <button onClick={() => window.open('https://arxiv.org/abs/1802.03426', '_blank')}>UMAP</button>
+          </p>
+        </Grid>
       </Grid>
     )
   }
