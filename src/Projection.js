@@ -644,7 +644,7 @@ class Projection extends Component {
       this.checkIntersects(mouse_position);
     })
     
-    view.on('dblclick', () => {
+    view.on('click', () => {
       if(this.scene.children[1].visible) this.props.clickOnImage();
     })
   }
