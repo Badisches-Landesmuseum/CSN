@@ -146,7 +146,7 @@ class Layout extends Component {
   setPreviewImage() {
       return (
       <img
-      src={ this.props.settings.url_prefix + this.props.metadata[this.state.hover_index].filename }
+      src={ this.props.metadata[this.state.hover_index].URL}
       alt="preview"
       style={{
         verticalAlign: "middle",
@@ -277,7 +277,7 @@ class Layout extends Component {
             </MenuItem>
 
               <SubMenu defaultOpen
-              title={collapsedControl ? null : "Data & Projections"}  
+              title={collapsedControl ? null : "Collection"}  
               icon={collapsedControl ? < FaDatabase />  : null }
               >
               <MenuItem>
@@ -294,10 +294,9 @@ class Layout extends Component {
               </MenuItem>
               </SubMenu>
               <SubMenu defaultOpen
-              title={collapsedControl ? null : "Dimension Filters"}  
+              title={collapsedControl ? null : "Time Filter"}  
               icon={collapsedControl ? <FaSlidersH />  : null }
               >
-
 
                 <MenuItem>
                 <SliderPane
@@ -313,8 +312,8 @@ class Layout extends Component {
                 </MenuItem>
                 </SubMenu>
 
-                <SubMenu
-                title={collapsedControl ? null : "Advanced Filters"}  
+                <SubMenu defaultOpen
+                title={collapsedControl ? null : "Query Filter"}  
                 icon={collapsedControl ? < FaSearch />  : null }
                 >
 
