@@ -1,0 +1,71 @@
+{
+    "title": "AP",
+    "datasetInfo": "All digitized objects except literature from Allard Pierson (3.915 objects)",
+    "embeddings": [
+        {
+            "name": "visual similarity (Resnet50 & UMAP)",
+            "file": "UMAP.json"
+        }
+    ],
+    "clusters": {
+        "clusterList": [
+            "century"
+        ],
+        "clusterColors": [
+            "#16fe15",
+            "#ff00ff",
+            "#0080ff",
+            "#ff8000",
+            "#804080",
+            "#5ef3b7"
+        ]
+    },
+    "total": 3915,
+    "sliders": [
+        {
+            "id": "yearStart",
+            "title": "Year (start)",
+            "info": "The earliest associated date of the object",
+            "typeNumber": "int",
+            "color": "#818186",
+            "min": 1520,
+            "max": 2007
+        },
+        {
+            "id": "yearEnd",
+            "title": "Year (end)",
+            "info": "The latest associated date of the object",
+            "typeNumber": "int",
+            "color": "#f280f3",
+            "min": 1525,
+            "max": 2007
+        }
+    ],
+    "info": [
+        "title",
+        "type",
+        "date",
+        "creator",
+        "contributor"
+    ],
+    "search": [
+        {
+            "columnField": "type",
+            "type": "selection"
+        },
+        {
+            "columnField": "creator",
+            "type": "selection"
+        },
+        {
+            "columnField": "contributor",
+            "type": "selection"
+        }
+    ],
+    "url_prefix": "https://hdl.handle.net/11245/",
+    "sprite_side": 32,
+    "sprite_dir": "ap",
+    "sprite_number": 4,
+    "sprite_image_size": 64,
+    "sprite_actual_size": 2048
+}
