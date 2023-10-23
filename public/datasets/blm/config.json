@@ -91,7 +91,7 @@
         {
             "id": "yearStart",
             "title": "Year (start)",
-            "info": "",
+            "info": "The earliest associated date of the object",
             "typeNumber": "int",
             "color": "#8f8081",
             "min": 1000,
@@ -100,7 +100,7 @@
         {
             "id": "yearEnd",
             "title": "Year (end)",
-            "info": "",
+            "info": "The latest associated date of the object",
             "typeNumber": "int",
             "color": "#87ff88",
             "min": 1000,

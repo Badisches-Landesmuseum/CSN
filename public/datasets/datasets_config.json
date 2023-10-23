@@ -1,24 +1,24 @@
 {
-    "default": 3,
+    "default": 2,
     "data": [
         {
-            "name": "BLM Collections (large)",
+            "name": "Landesmuseum Collections (large)",
             "directory": "blm"
         },
         {
-            "name": "BLM Photographic (medium)",
+            "name": "Landesmuseum Photographic",
             "directory": "blm_photographic"
         },    
         {
-            "name": "BLM None-Photographic (small)",
+            "name": "Landesmuseum None-Photographic",
             "directory": "blm_none-photographic"
         },   
         {
-            "name": "BLM Antique (small)",
+            "name": "Landesmuseum Antique",
             "directory": "blm_antique"
         },
         {
-            "name": "AP Collections (large)",
+            "name": "Allard Pierson None-Literature",
             "directory": "ap"
         }
     ]
