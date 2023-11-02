@@ -3,11 +3,12 @@
 }
 
 html {
-  background: #000;
+  background: #adadad;
   font-size: 16px;
   line-height: 1.5;
-  color: #adadad;
-  font-feature-settings: 'tnum';
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  /* font-feature-settings: 'tnum'; */
   overflow: hidden;
 }
 

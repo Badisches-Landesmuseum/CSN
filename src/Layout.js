@@ -35,6 +35,7 @@ class Layout extends Component {
       clusterTypeSelected:'-',
       greyRenderTypeSelected:0,
       dimensions: {},
+      language: 'english',
       collapsedControl: false,
       collapsedObject: false
     }
@@ -46,6 +47,14 @@ class Layout extends Component {
     this.selectDataset = this.selectDataset.bind(this);
     this.toggleControl = this.toggleControl.bind(this);
     this.refProjection = React.createRef();
+    this.english = "The Collection Space Navigator (CSN) is an exploratory visualisation tool for exploring collections and their multidimensional representations. The tool was developed to better understand multidimensional data, their methods and semantic qualities through spatial navigation and filtering. CSN is used here with parts of the digital collections of the Badisches Landesmuseum Karlsruhe and Allard Pierson Amsterdam. It enables individual areas of the collection to be better explored and displayed and is thus a starting point for further collection research, as well as being beautiful. The tool was developed by Tillmann Ohm and Mar Canet Solà and adapted within the framework of 'Creative User Empowerment'(2023) by Tillmann Ohm, Etienne Posthumus, Sonja Thiel.";
+    this.deutsch = "Der Collection Space Navigator (CSN) ist ein exploratives Visualisierungstool für die Erforschung von Sammlungen und ihren multidimensionalen Darstellungen. Das Tool wurde entwickelt, um multidimensionale Daten, ihre Methoden und semantischen Qualitäten durch räumliche Navigation und Filterung besser zu verstehen. CSN wird hier mit Teilen der digitalen Sammlungen des Badischen Landesmuseums Karlsruhe und Allard Pierson Amsterdam eingesetzt. Es ermöglicht, einzelne Sammlungsbereiche besser erforschbar und darstellbar zu machen und ist somit ein Ausgangspunkt für weitere Sammlungsforschung und außerdem wunderschön. Das Tool wurde entwickelt von Tillmann Ohm und Mar Canet Solà und im Rahmen von `Creative User Empowerment`(2023) angepasst durch Tillmann Ohm, Etienne Posthumus, Sonja Thiel.";
+  }
+  
+
+  toggleLanguage = () => {
+    const newLanguage = this.state.language === 'english' ? 'german' : 'english';
+    this.setState({ language: newLanguage });
   }
 
   componentDidMount() {
@@ -146,7 +155,7 @@ class Layout extends Component {
   setPreviewImage() {
       return (
       <img
-      src={ this.props.metadata[this.state.hover_index].URL}
+      src={this.props.settings.image_prefix + this.props.metadata[this.state.hover_index].URL}
       alt="preview"
       style={{
         verticalAlign: "middle",
@@ -236,7 +245,7 @@ class Layout extends Component {
 
     let main_style = {
       position: 'relative',
-      background: '#111',
+      background: '#adadad',
       overflow: 'hidden',
       width: ww, 
       height: wh
@@ -272,9 +281,19 @@ class Layout extends Component {
           <ProSidebar collapsed={collapsedControl}>
             <Menu iconShape='square'>
             <MenuItem>
-            <h3></h3>
+            {collapsedObject ? (
+              <h3></h3>
+            ) : (
+          <div>
+            <div style={{textAlign: 'right'}}>
+              <img className='ap_logo' src="ap_logo.svg" width="160px" alt="Allard Pierson Logo" />
+            </div>  
+          </div>
+            )}            
             <a className="collapseCon" onClick={this.toggleControl}>{collapsedControl ? < FaAngleDoubleLeft />  : < FaAngleDoubleRight /> }</a>
             </MenuItem>
+
+  
 
               <SubMenu defaultOpen
               title={collapsedControl ? null : "Collection"}  
@@ -357,7 +376,15 @@ class Layout extends Component {
           <ProSidebar collapsed={collapsedObject}>
             <Menu iconShape='square'>   
             <MenuItem>
-            {collapsedObject ? <h3></h3> : <h3>Collection Space Navigator</h3> }
+            {collapsedObject ? (
+              <h3></h3>
+            ) : (
+          <div>
+            <div style={{marginLeft: '4px'}}>
+              <img className='blm_logo' src="blm_logo.svg" width="160px" alt="Badisches Landesmuseum Logo" />
+            </div>
+          </div>
+            )}            
             <a className='collapseObj' onClick={this.toggleObject}>{collapsedObject ? < FaAngleDoubleRight />  : < FaAngleDoubleLeft /> }</a>
             </MenuItem>
               <SubMenu defaultOpen
@@ -369,6 +396,7 @@ class Layout extends Component {
                   setPreviewPaneCanvas={this.setPreviewPaneCanvas}
                   setPreviewImage={this.setPreviewImage}
                   hover_index={hover_index}
+                  image_server={settings.image_server}
                 />
               </SubMenu>
               <SubMenu defaultOpen
@@ -411,10 +439,37 @@ class Layout extends Component {
               icon={collapsedObject ? <FaQuestion />  : null }
               >         
               <div className='about'>
-                The Collection Space Navigator (CSN) is an <strong>interactive visualization interface for multidimensional datasets</strong>.
-                It functions as an explorative visualization tool for researching collections and their multidimensional representations. 
-                We designed this tool to better understand multidimensional data, its methods, and semantic qualities through spatial navigation and filtering. 
-                CSN can be used with any image collection and can be customized for specific research needs. <a href="https://github.com/Collection-Space-Navigator/CSN" target="_blank" rel="noreferrer" ><strong>[more on GitHub...]</strong></a>
+                
+
+              <p>
+              <div>
+                <button 
+                  onClick={() => this.setState({ language: 'english' })}
+                  style={{
+                    fontWeight: this.state.language === 'english' ? 'bold' : 'normal',
+                    textDecoration: this.state.language === 'english' ? 'none' : 'underline'
+                  }}
+                >
+                  English
+                </button>
+                {' / '}
+                <button 
+                  onClick={() => this.setState({ language: 'deutsch' })}
+                  style={{
+                    fontWeight: this.state.language === 'deutsch' ? 'bold' : 'normal',
+                    textDecoration: this.state.language === 'deutsch' ? 'none' : 'underline'
+                  }}
+                >
+                  Deutsch
+                </button>
+              </div>
+              </p>
+              <p>
+              {this.state.language === 'english' ? this.english : this.deutsch}
+              </p>
+              <p>
+              Open Source Code: <button style={{textAlign: "left"}} onClick={() => window.open('https://github.com/Badisches-Landesmuseum/CSN', '_blank')}>https://github.com/Badisches-Landesmuseum/CSN</button>
+              </p>
               </div>
               </SubMenu>
             </Menu>
