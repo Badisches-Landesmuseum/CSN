@@ -128,9 +128,10 @@
         }
     ],
     "url_prefix": "https://data.landesmuseum.de/id/",
-    "sprite_side": 32,
+    "sprite_side": 24,
     "sprite_dir": "blm_none-photographic",
-    "sprite_number": 13,
-    "sprite_image_size": 64,
-    "sprite_actual_size": 2048
+    "sprite_number": 16,
+    "sprite_image_size": 85,
+    "sprite_actual_size": 2048,
+    "image_server": "data.landesmuseum.de"
 }

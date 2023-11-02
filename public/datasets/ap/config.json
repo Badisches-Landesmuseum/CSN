@@ -63,9 +63,10 @@
         }
     ],
     "url_prefix": "https://hdl.handle.net/11245/",
-    "sprite_side": 32,
+    "sprite_side": 24,
     "sprite_dir": "ap",
-    "sprite_number": 4,
-    "sprite_image_size": 64,
-    "sprite_actual_size": 2048
+    "sprite_number": 7,
+    "sprite_image_size": 85,
+    "sprite_actual_size": 2048,
+    "image_server": "images.uba.uva.nl"
 }
