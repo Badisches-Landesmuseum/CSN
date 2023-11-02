@@ -63,6 +63,7 @@
         }
     ],
     "url_prefix": "https://hdl.handle.net/11245/",
+    "image_prefix": "https://images.uba.uva.nl/iiif/2/",
     "sprite_side": 24,
     "sprite_dir": "ap",
     "sprite_number": 7,

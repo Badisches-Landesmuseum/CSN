@@ -128,6 +128,7 @@
         }
     ],
     "url_prefix": "https://data.landesmuseum.de/id/",
+    "image_prefix": "https://data.landesmuseum.de/iiif/3/",
     "sprite_side": 24,
     "sprite_dir": "blm_none-photographic",
     "sprite_number": 16,
