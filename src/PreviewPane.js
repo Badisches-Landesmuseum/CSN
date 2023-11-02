@@ -1,3 +1,4 @@
+import { size } from 'lodash';
 import React, { Component } from 'react'
 
 class PreviewPane extends Component {
@@ -54,6 +55,9 @@ class PreviewPane extends Component {
           width={previewPane_image_size}
           height={previewPane_image_size}
         />
+        <div style={{fontSize: "9px", marginLeft: "8px"}}>
+          preview images from {this.props.image_server} (no warranty)
+        </div>
       </div>
     )
   }
