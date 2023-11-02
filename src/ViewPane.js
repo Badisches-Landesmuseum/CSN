@@ -27,7 +27,7 @@ class ViewPane extends Component {
         
           
           <Grid item xs={4}>
-            clusters:
+            colors:
           </Grid>
           <Grid item xs={8}>
             <select onChange={this.props.handleChangeCluster}>
