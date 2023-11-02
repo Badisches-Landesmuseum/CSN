@@ -1,24 +1,24 @@
 {
-    "default": 2,
+    "default": 3,
     "data": [
         {
-            "name": "Landesmuseum Collections (large)",
+            "name": "Landesmuseum Collections (61 MB)",
             "directory": "blm"
         },
         {
-            "name": "Landesmuseum Photographic",
+            "name": "Landesmuseum Photographic (42 MB)",
             "directory": "blm_photographic"
         },    
         {
-            "name": "Landesmuseum None-Photographic",
+            "name": "Landesmuseum None-Photographic (21 MB)",
             "directory": "blm_none-photographic"
         },   
         {
-            "name": "Landesmuseum Antique",
+            "name": "Landesmuseum Antique (5 MB)",
             "directory": "blm_antique"
         },
         {
-            "name": "Allard Pierson None-Literature",
+            "name": "Allard Pierson None-Literature (10 MB)",
             "directory": "ap"
         }
     ]
