@@ -285,16 +285,16 @@ class Layout extends Component {
               <h3></h3>
             ) : (
           <div>
-            <div style={{textAlign: 'right'}}>
-              <img className='ap_logo' src="ap_logo.svg" width="160px" alt="Allard Pierson Logo" />
+            <div>
+            <h3></h3>
+              {/* <img className='ap_logo' src="ap_logo.svg" width="180px" alt="Allard Pierson Logo" />
+              <img className='blm_logo' src="blm_logo.svg" width="120px" alt="Badisches Landesmuseum Logo" /> */}
             </div>  
           </div>
             )}            
             <a className="collapseCon" onClick={this.toggleControl}>{collapsedControl ? < FaAngleDoubleLeft />  : < FaAngleDoubleRight /> }</a>
             </MenuItem>
-
   
-
               <SubMenu defaultOpen
               title={collapsedControl ? null : "Collection"}  
               icon={collapsedControl ? < FaDatabase />  : null }
@@ -331,7 +331,7 @@ class Layout extends Component {
                 </MenuItem>
                 </SubMenu>
 
-                <SubMenu defaultOpen
+                <SubMenu
                 title={collapsedControl ? null : "Query Filter"}  
                 icon={collapsedControl ? < FaSearch />  : null }
                 >
@@ -360,6 +360,44 @@ class Layout extends Component {
                 />
               </MenuItem>
             </SubMenu>
+
+            <SubMenu
+              title={collapsedControl ? null : 'About'}  
+              icon={collapsedControl ? <FaQuestion />  : null }
+              >         
+              <div className='about'>
+              <p>
+              <div>
+                <button 
+                  onClick={() => this.setState({ language: 'english' })}
+                  style={{
+                    fontWeight: this.state.language === 'english' ? 'bold' : 'normal',
+                    textDecoration: this.state.language === 'english' ? 'none' : 'underline'
+                  }}
+                >
+                  English
+                </button>
+                {' / '}
+                <button 
+                  onClick={() => this.setState({ language: 'deutsch' })}
+                  style={{
+                    fontWeight: this.state.language === 'deutsch' ? 'bold' : 'normal',
+                    textDecoration: this.state.language === 'deutsch' ? 'none' : 'underline'
+                  }}
+                >
+                  Deutsch
+                </button>
+              </div>
+              </p>
+              <p>
+              {this.state.language === 'english' ? this.english : this.deutsch}
+              </p>
+              <p>
+              Open Source Code: <button style={{textAlign: "left"}} onClick={() => window.open('https://github.com/Badisches-Landesmuseum/CSN', '_blank')}>https://github.com/Badisches-Landesmuseum/CSN</button>
+              </p>
+              </div>
+              </SubMenu>
+
             </Menu>
           </ProSidebar>
           </div>
@@ -381,12 +419,16 @@ class Layout extends Component {
             ) : (
           <div>
             <div style={{marginLeft: '4px'}}>
-              <img className='blm_logo' src="blm_logo.svg" width="160px" alt="Badisches Landesmuseum Logo" />
+              <img className='blm_logo' src="blm_logo.svg" width="150px" alt="Badisches Landesmuseum Logo" />
+            </div>
+            <div style={{marginLeft: '4px', marginTop: '16px'}}>
+              <img className='ap_logo' src="ap_logo.svg" width="180px" alt="Allard Pierson Logo" />
             </div>
           </div>
             )}            
             <a className='collapseObj' onClick={this.toggleObject}>{collapsedObject ? < FaAngleDoubleRight />  : < FaAngleDoubleLeft /> }</a>
             </MenuItem>
+            
               <SubMenu defaultOpen
                 title={collapsedObject ? null : "Object Preview"}  
                 icon={collapsedObject ? <FaRegImage />  : null }
@@ -434,44 +476,7 @@ class Layout extends Component {
               </MenuItem>
               </SubMenu>
 
-            <SubMenu
-              title={collapsedObject ? null : 'About'}  
-              icon={collapsedObject ? <FaQuestion />  : null }
-              >         
-              <div className='about'>
-                
-
-              <p>
-              <div>
-                <button 
-                  onClick={() => this.setState({ language: 'english' })}
-                  style={{
-                    fontWeight: this.state.language === 'english' ? 'bold' : 'normal',
-                    textDecoration: this.state.language === 'english' ? 'none' : 'underline'
-                  }}
-                >
-                  English
-                </button>
-                {' / '}
-                <button 
-                  onClick={() => this.setState({ language: 'deutsch' })}
-                  style={{
-                    fontWeight: this.state.language === 'deutsch' ? 'bold' : 'normal',
-                    textDecoration: this.state.language === 'deutsch' ? 'none' : 'underline'
-                  }}
-                >
-                  Deutsch
-                </button>
-              </div>
-              </p>
-              <p>
-              {this.state.language === 'english' ? this.english : this.deutsch}
-              </p>
-              <p>
-              Open Source Code: <button style={{textAlign: "left"}} onClick={() => window.open('https://github.com/Badisches-Landesmuseum/CSN', '_blank')}>https://github.com/Badisches-Landesmuseum/CSN</button>
-              </p>
-              </div>
-              </SubMenu>
+          
             </Menu>
           </ProSidebar>
           </div>
