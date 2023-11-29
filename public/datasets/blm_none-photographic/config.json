@@ -84,7 +84,7 @@
             "title": "Year (start)",
             "info": "The earliest associated date of the object",
             "typeNumber": "int",
-            "color": "#848094",
+            "color": "#78FB5C",
             "min": 1000,
             "max": 2022
         },
@@ -93,7 +93,7 @@
             "title": "Year (end)",
             "info": "The latest associated date of the object",
             "typeNumber": "int",
-            "color": "#98fc81",
+            "color": "#99FFFF",
             "min": 1000,
             "max": 2099
         }
