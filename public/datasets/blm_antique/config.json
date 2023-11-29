@@ -73,19 +73,19 @@
             "id": "yearStart",
             "title": "Year (start)",
             "info": "The earliest associated date of the object",
-            "typeNumber": "float",
-            "color": "#838193",
-            "min": -8000.0,
-            "max": 1000.0
+            "typeNumber": "int",
+            "color": "#78FB5C",
+            "min": -8000,
+            "max": 1000
         },
         {
             "id": "yearEnd",
             "title": "Year (end)",
             "info": "The latest associated date of the object",
-            "typeNumber": "float",
-            "color": "#81f794",
-            "min": -6500.0,
-            "max": 1453.0
+            "typeNumber": "int",
+            "color": "#99FFFF",
+            "min": -6500,
+            "max": 1453
         }
     ],
     "info": [
