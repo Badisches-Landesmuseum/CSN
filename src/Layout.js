@@ -417,14 +417,11 @@ class Layout extends Component {
             {collapsedObject ? (
               <h3></h3>
             ) : (
-          <div>
             <div style={{marginLeft: '4px'}}>
-              <img className='blm_logo' src="blm_logo.svg" width="150px" alt="Badisches Landesmuseum Logo" />
+              <a href="https://datalab.landesmuseum.de/">
+                <img className='datalab_logo' src="datalab_logo.svg" width="240px" alt="Datalab Logo" />
+              </a>
             </div>
-            <div style={{marginLeft: '4px', marginTop: '16px'}}>
-              <img className='ap_logo' src="ap_logo.svg" width="180px" alt="Allard Pierson Logo" />
-            </div>
-          </div>
             )}            
             <a className='collapseObj' onClick={this.toggleObject}>{collapsedObject ? < FaAngleDoubleRight />  : < FaAngleDoubleLeft /> }</a>
             </MenuItem>
